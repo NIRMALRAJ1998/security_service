@@ -32,7 +32,7 @@
     <link href="{% static 'base/vendor/aos/aos.css' %}" rel="stylesheet">
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/home1.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/security.css' %}">
   </head>
 
   <style>
@@ -254,129 +254,104 @@
       </section><!-- End About Us Section -->
       
       <section id="services" style="background-color: #dbf6e9">
-        <div class="container" data-aos="fade-up">
-          <header class="section-header">
-            <h3>Our Services</h3>
-          </header>
-          <div class="container">
-            <div class="card1">
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'Images/image1.png' %}">
-                </figure>
+        <div class="container my-5">
+          <h2 class="text-center mb-4">OUR SERVICES</h2>
+          <div class="row justify-content-center">
+        
+            <!-- Housekeeping Card -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img src="{% static 'Images/image1.png' %}" class="card-img-top" alt="Housekeeping">
                 <div class="card-body">
-                  <h4 class="card-title">MANNED GUARDING</h4>
-                  <p class="card-text">Whatever the type of premises, business or building, manned on-site security guards are very important to avoid risk to life, theft ,vandalism , and damage to property. Our Uniformed certified security guards are trained to provide not just visual deterrent to unwanted element on site, but also to ensure prevention of incidents through keen eye for detail</p>
-                </div>
-              </div>
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image2.png' %}" alt="Card image" style="width:100%">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">CCTV SOLUTIONS</h4>
-                  <p class="card-text">Don’t miss a thing. Upgrade your home security to high definition with one of our HD CCTV packages, which can be tailored to suit your home security needs. Record true colour daytime images and crisp monochrome night-time images, capturing all the detail you need.</p>
-                </div>
-              </div>
-              <div class="card" style="width:50rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image3.png' %}" alt="Card image" style="width:100%">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">INTRUDER ALARM SYSTEMS</h4>
-                  <p class="card-text">All our alarms feature state-of-the-art motion detection sensors and have been designed to be flexible and easy to operate in a wide range of environments capturing all the detail you need.</p>
-                </div>
-              </div>
-            </div><br><br>
-            <div class="card1">
-              <div class="card" style="width:50rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image4.png' %}">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">ELECTRIC FENCE SOLUTION</h4>
-                  <p class="card-text">We Supply and install electric fences using treated wooden posts, steel (SHS) posts or concrete posts.</p>
-                </div>
-              </div>
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image5.png' %}" alt="Card image" style="width:100%">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">BIOMETRIC ACCESS CONTROL</h4>
-                  <p class="card-text">With fingerprint identification technology, offices and secure places can be secured with bio-metric devices.</p>
-                </div>
-              </div>
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image6.png' %}" alt="Card image" style="width:100%">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">K9 SECURITY</h4>
-                  <p class="card-text">We have several breeds of dogs that are trained in intruder detection, searching, patrolling and handling.</p>
-                </div>
-              </div>
-            </div><br><br>
-            <div class="card1">
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image7.png' %}">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">DUAL MOTION SENSORS</h4>
-                  <p class="card-text">Outdoor dual technology motion sensors offer the unique combination of Doppler Microwave and Passive Infrared technology.</p>
-                </div>
-              </div>
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image8.png' %}" alt="Card image" style="width:100%">
-                </figure>
-                <div class="card-body">
-                  <h4 class="card-title">INTRUDER DETECTION</h4>
-                  <p class="card-text">We install and monitor remote intruder monitoring systems and provide an immediate response in the event of a security breach. </p>
-                </div>
-              </div>
-              <div class="card" style="width:20rem;">
-                <figure class="effect-lily">
-                  <img class="card-img-top" src="{% static 'base/Images/image9.png' %}" alt="Card image" style="width:100%">
-                </figure> 
-                <div class="card-body">
-                  <h4 class="card-title">PERIMETER INTRUSION DETECTION</h4>
-                  <p class="card-text">Next-generation fence-mounted sensors that detect cut or climb attempts and pinpoint intrusion attempts to within 1.1m / 3.6ft.</p>
+                  <h5 class="card-title">HOUSE KEEPING</h5>
+                  <p class="card-text">
+                    Professional cleaning, organizing, and maintenance services to ensure a spotless environment.
+                  </p>
+                  <ul>
+                    <li>✅ Daily or scheduled cleaning routines</li>
+                    <li>✅ Homes, offices, and commercial buildings</li>
+                    <li>✅ Dusting, mopping, vacuuming, and sanitizing</li>
+                    <li>✅ Trusted, trained, and verified cleaners</li>
+                  </ul>
                 </div>
               </div>
             </div>
+        
+            <!-- Security Guard Card -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img src="{% static 'Images/security.png' %}" class="card-img-top" alt="Security Guard">
+                <div class="card-body">
+                  <h5 class="card-title">SECURITY GUARD SERVICES</h5>
+                  <p class="card-text">
+                    Trusted security personnel offering surveillance, access control, and emergency response services.
+                  </p>
+                  <ul>
+                    <li>✅ 24/7 on-site security</li>
+                    <li>✅ Residential, corporate & industrial coverage</li>
+                    <li>✅ Patrol, monitoring, and access control</li>
+                    <li>✅ Emergency-ready trained personnel</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Bouncer Services Card -->
+            <div class="col-md-4 mb-4">
+              <div class="card h-100">
+                <img src="{% static 'Images/bouncer.png' %}" class="card-img-top" alt="Bouncer">
+                <div class="card-body">
+                  <h5 class="card-title">BOUNCER SERVICES</h5>
+                  <p class="card-text">
+                    Experienced bouncers ensuring crowd control, safety, and smooth event operations.
+                  </p>
+                    <li>✅ Physically fit and professionally trained</li>
+                    <li>✅ Party, club, and concert security services solutions</li>
+                    <li>✅ Crowd risk assessment, management & mitigation</li>
+                    <li>✅ Ensuring safety with professionalism</li>
+                  </ul>
+                </div>
+              </div>
+            </div>       
           </div>
-        </div>
+        </div>        
       </section>
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="section-bg" style="background-color: #cdfffc;">
         <div class="container" data-aos="fade-up">
-
+      
           <div class="contact-page">
             <div class="contact-title">
-                <h2>Contact Us</h2>
+              <h2>Contact Us</h2>
             </div>
             <div class="form-wrapper">
               <form action="{% url 'submit' %}" method="post">
-                    {% csrf_token %}
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br><br>
-        
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br><br>
-        
-                    <label for="message">Message:</label><br>
-                    <input type="message" id="message" name="message">
-
-        
-                    <input type="submit" value="Submit">
-                </form>
+                {% csrf_token %}
+                
+                <label for="name">Name:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+      
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+      
+                <label for="phone">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" placeholder="1234567890" required><br><br>
+      
+                <label for="service">Select Service:</label><br>
+                <select id="service" name="service" required>
+                  <option value="Selectservices">Select services</option>
+                  <option value="security">Security Services</option>
+                  <option value="housekeeping">Housekeeping</option>
+                  <option value="bouncer">Bouncer Services</option>
+                </select><br><br>
+      
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" required></textarea><br><br>
+      
+                <input type="submit" value="Submit">
+              </form>
             </div>
-        </div>
-          
-          
-  
+          </div>  
           <div class="row contact-info">
 
             <div class="col-md-4">
