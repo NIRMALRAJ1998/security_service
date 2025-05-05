@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Bedrock</title>
+    <title>EVOLVE SECURTIES</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -35,6 +35,62 @@
     <link rel="stylesheet" type="text/css" href="{% static 'myapp/home1.css' %}">
   </head>
 
+  <style>
+
+.contact-page {
+    /* You can add styles for the overall contact page layout here if needed */
+}
+
+.contact-title h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 30px; /* Add some space below the title */
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 2.5em; /* Make the title stand out */
+}
+
+.form-wrapper {
+    /* Your existing form wrapper styles can go here */
+    width: 400px; /* Example width */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+}
+
+.form-wrapper label {
+    display: block; /* Make labels appear on their own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="message"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    /* border: 1px solid #ddd; */
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding and border are within the element's width */
+}
+
+.form-wrapper input[type="submit"] {
+    background-color: #007bff; /* Example button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-wrapper input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+  </style>
+
   <body>
 
     <!-- ======= Header ======= -->
@@ -43,7 +99,7 @@
 
         <div class="row justify-content-center">
           <div class="col-xl-11 d-flex align-items-center">
-            <h1 class="logo mr-auto"><a href="#">Bedrock</a></h1>
+            <h1 class="logo mr-auto"><a href="#">EVOLVE</a></h1>
             <!-- Uncomment below if you prefer to use an image logo 
            <a href="#" class="logo mr-auto"><img src="static/base/Images/bedrock2.png" alt="BEDROCK" style="background-color:none"></a>-->
 
@@ -52,12 +108,13 @@
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="">Contact Us</a></li>
+
                 <!--<li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>-->
-                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#team">Team</a></li>--
 
               </ul>
-            </nav><!-- .nav-menu -->
+            </nav>< .nav-menu -->
           </div>
         </div>
 
@@ -76,7 +133,7 @@
             <div class="carousel-item active" style="background-image: url(static/base/Images/Bedrock5.jpg)">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Bedrock Security Services</h2>
+                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
                   <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
                   <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                 </div>
@@ -86,7 +143,7 @@
             <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock2.jpg)">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Bedrock Security Services</h2>
+                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
                   <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
                   <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                 </div>
@@ -96,7 +153,7 @@
             <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock6.jpg)">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Bedrock Security Services</h2>
+                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
                   <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
                   <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                 </div>
@@ -106,7 +163,7 @@
             <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock1.jpg)">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Bedrock Security Services</h2>
+                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
                   <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
                   <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                 </div>
@@ -116,7 +173,7 @@
             <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock4.png)">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Bedrock Security Services</h2>
+                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
                   <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
                   <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                 </div>
@@ -147,7 +204,7 @@
 
           <header class="section-header">
             <h3>About Us</h3>
-            <p>Bedrock Holdings Ltd was registered and started operations in 2002. We are a major private security services provider with assignments spread across the country.The company offers integrated security solutions manned and electronic security to companies, organizations, institutions, businesses and individuals.</p>
+            <p>Evolve Holdings Ltd was registered and started operations in 2002. We are a major private security services provider with assignments spread across the country.The company offers integrated security solutions manned and electronic security to companies, organizations, institutions, businesses and individuals.</p>
           </header>
 
           <div class="row about-cols">
@@ -291,25 +348,42 @@
             </div>
           </div>
         </div>
-
-
       </section>
       <!-- ======= Contact Section ======= -->
       <section id="contact" class="section-bg" style="background-color: #cdfffc;">
         <div class="container" data-aos="fade-up">
 
-          <div class="section-header">
-            <h3>Contact Us</h3>
-            <p>Get in touch by calling, emailing, visiting or sending us a message directly by filling out the below with the correct credentials. Thank you.</p>
-          </div>
+          <div class="contact-page">
+            <div class="contact-title">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="form-wrapper">
+              <form action="{% url 'submit' %}" method="post">
+                    {% csrf_token %}
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required><br><br>
+        
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+        
+                    <label for="message">Message:</label><br>
+                    <input type="message" id="message" name="message">
 
+        
+                    <input type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+          
+          
+  
           <div class="row contact-info">
 
             <div class="col-md-4">
               <div class="contact-address">
                 <i class="ion-ios-location-outline"></i>
                 <h3>Address</h3>
-                <address>Tom Mboya Drive, Kisumu, Kenya.</address>
+                <address>olympia tech park, chennai </address>
               </div>
             </div>
 
@@ -317,7 +391,7 @@
               <div class="contact-phone">
                 <i class="ion-ios-telephone-outline"></i>
                 <h3>Phone Number</h3>
-                <p><a href="tel:+155895548855">+254 723 727 101</a></p>
+                <p><a href="tel:+155895548855">+91 7897543432</a></p>
               </div>
             </div>
 
@@ -325,16 +399,12 @@
               <div class="contact-email">
                 <i class="ion-ios-email-outline"></i>
                 <h3>Email</h3>
-                <p><a href="mailto:info@bedrock.co.ke">info@bedrock.co.ke</a></p>
+                <p><a href="mailto:info@bedrock.co.ke">evolvesolutins@gmail.com</a></p>
               </div>
             </div>
 
           </div>
-          <center>
-            <div class="col-sm-6 col-sm-offset-3">
-              {% include 'contact.html' %}
-            </div>           
-          </center>
+         
 
         </div>
       </section><!-- End Contact Section -->
@@ -348,7 +418,7 @@
           <div class="row">
 
             <div class="col-lg-3 col-md-6 footer-info">
-              <h3>Bedrock Security Services</h3>
+              <h3>Evolve Security Services</h3>
               <p>We are more than just a security company, We are your family.</p>
             </div>
 
@@ -414,7 +484,7 @@
     <script src="{% static 'base/vendor/aos/aos.js' %}"></script>
 
     <!-- Template Main JS File -->
-    <script src="{% static 'base/Javascript/main.js' %}"></script>
+    <script src="{% static 'myapp/main.js' %}"></script>
 
   </body>
 
