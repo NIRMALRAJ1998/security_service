@@ -322,12 +322,171 @@ html {
         </div>        
       </section>
       <!-- ======= Contact Section ======= -->
+       <style>
+        /* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #d7fcfb;
+  margin: 0;
+  padding: 0;
+}
+
+/* Flex container: map on left, form on right */
+.contact-page {
+  display: flex;
+  flex-direction: row; /* left to right */
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+/* Map Section (LEFT) */
+.map-section {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+}
+
+.map-section iframe {
+  width: 100%;
+  height: 400px;
+  border-radius: 12px;
+  border: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Section (RIGHT) */
+.form-wrapper {
+  flex: 1;
+  min-width: 300px;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 25px 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.form-wrapper h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper label {
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="tel"],
+.form-wrapper select,
+.form-wrapper textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.form-wrapper textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.form-wrapper input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  height: 45px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-wrapper input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Mobile-friendly */
+@media (max-width: 768px) {
+  .contact-page {
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
+  }
+
+  .form-wrapper,
+  .map-section {
+    max-width: 100%;
+  }
+}
+
+      </style>
+
       <section id="contact" class="section-bg" style="background-color: #cdfffc;">
         <div class="container" data-aos="fade-up">
-      
+
           <div class="contact-page">
+            <!-- MAP SECTION (LEFT) -->
+            <div class="map-section">
+              <iframe 
+                src="https://www.google.com/maps?q=Coimbatore&output=embed" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          
+            <!-- FORM SECTION (RIGHT) -->
+            <div class="form-wrapper">
+              <h2>Contact Us</h2>
+              <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" placeholder="Your name" required>
+          
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="Your email" required>
+          
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" placeholder="1234567890" required>
+          
+                <label for="service">Select Service:</label>
+                <select id="service" required>
+                  <option disabled selected>Select services</option>
+                  <option>Web Development</option>
+                  <option>App Development</option>
+                  <option>SEO Services</option>
+                </select>
+          
+                <label for="message">Message:</label>
+                <textarea id="message" placeholder="Your message..."></textarea>
+          
+                <input type="submit" value="Submit">
+              </form>
+            </div>
+          </div>          
+      
+          <!-- <div class="contact-page">
             <div class="contact-title">
               <h2>Contact Us</h2>
+            </div>
+            <div class="map-section">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5063648009475!2d76.949382!3d10.990451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857d1f4cc6fbb%3A0xdeadbeef12345678!2sCoimbatore!5e0!3m2!1sen!2sin!4v1683000000000!5m2!1sen!2sin"  
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
             </div>
             <div class="form-wrapper">
               <form action="{% url 'submit' %}" method="post">
@@ -359,7 +518,7 @@ html {
                 <input type="submit" value="Submit">
               </form>
             </div>
-          </div>  
+          </div>   -->
           <div class="row contact-info">
 
             <div class="col-md-4">
