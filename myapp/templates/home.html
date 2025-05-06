@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>EVOLVE SECURTIES</title>
+    <title>EVOLVE SECURITIES</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -30,6 +30,7 @@
     <link href="{% static 'base/vendor/venobox/venobox.css' %}" rel="stylesheet">
     <link href="{% static 'base/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
     <link href="{% static 'base/vendor/aos/aos.css' %}" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{% static 'myapp/security.css' %}">
@@ -89,6 +90,60 @@
     background-color: #0056b3;
 }
 
+
+
+/* Desktop Menu - default */
+.nav-menu {
+  display: flex;
+  gap: 20px;
+}
+
+
+/* Hide nav by default on mobile */
+@media (max-width: 991px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    background: #000;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px 0;
+    z-index: 999;
+  }
+
+  .nav-menu.mobile-nav {
+    display: flex !important;
+  }
+
+  .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-menu ul li {
+    margin: 10px 0;
+  }
+
+  .mobile-nav-toggle {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+    font-size: 28px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+
+
   </style>
 
   <body>
@@ -96,30 +151,29 @@
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top header-transparent">
       <div class="container-fluid">
-
         <div class="row justify-content-center">
           <div class="col-xl-11 d-flex align-items-center">
             <h1 class="logo mr-auto"><a href="#">EVOLVE</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo 
-           <a href="#" class="logo mr-auto"><img src="static/base/Images/bedrock2.png" alt="BEDROCK" style="background-color:none"></a>-->
-
-            <nav class="nav-menu d-none d-lg-block">
+    
+            <!-- ☰ Mobile nav toggle -->
+            <button class="mobile-nav-toggle d-lg-none" type="button">☰</button>
+    
+            <!-- Nav Menu -->
+            <nav class="nav-menu">
               <ul>
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about">About Us</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="">Contact Us</a></li>
-
-                <!--<li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#team">Team</a></li>--
-
+                <li><a href="#contact">Contact Us</a></li>
               </ul>
-            </nav>< .nav-menu -->
+            </nav>
+    
           </div>
         </div>
-
       </div>
-    </header><!-- End Header -->
+    </header>
+    
+    
 
     <!-- ======= Intro Section ======= -->
     <section id="intro">
@@ -261,7 +315,7 @@
             <!-- Housekeeping Card -->
             <div class="col-md-4 mb-4">
               <div class="card h-100">
-                <img src="{% static 'Images/image1.png' %}" class="card-img-top" alt="Housekeeping">
+                <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
                 <div class="card-body">
                   <h5 class="card-title">HOUSE KEEPING</h5>
                   <p class="card-text">
@@ -280,7 +334,7 @@
             <!-- Security Guard Card -->
             <div class="col-md-4 mb-4">
               <div class="card h-100">
-                <img src="{% static 'Images/security.png' %}" class="card-img-top" alt="Security Guard">
+                <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
                 <div class="card-body">
                   <h5 class="card-title">SECURITY GUARD SERVICES</h5>
                   <p class="card-text">
@@ -299,7 +353,7 @@
             <!-- Bouncer Services Card -->
             <div class="col-md-4 mb-4">
               <div class="card h-100">
-                <img src="{% static 'Images/bouncer.png' %}" class="card-img-top" alt="Bouncer">
+                <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
                 <div class="card-body">
                   <h5 class="card-title">BOUNCER SERVICES</h5>
                   <p class="card-text">
@@ -324,6 +378,14 @@ body {
   background-color: #d7fcfb;
   margin: 0;
   padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 80px; /* Adjust based on navbar height */
 }
 
 /* Flex container: map on left, form on right */
@@ -618,6 +680,15 @@ body {
     <script src="{% static 'base/vendor/aos/aos.js' %}"></script>
 
     <!-- Template Main JS File -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $(".mobile-nav-toggle").click(function () {
+      $(".nav-menu").toggleClass("mobile-nav");
+    });
+  });
+</script>
+
     <script src="{% static 'myapp/main.js' %}"></script>
 
   </body>
