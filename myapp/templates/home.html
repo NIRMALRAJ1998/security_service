@@ -33,6 +33,56 @@
     
     <style>
 
+      /* Sticky navbar */
+        /* nav {
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          background-color: #000;
+          padding: 15px 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        /* Nav text styling */
+        /* nav .logo {
+          font-size: 22px;
+          font-weight: 700;
+          color: white;
+        }
+
+        nav ul {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+        }
+
+        nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+          color: #b300b3;
+        } */ */
+
+        html {
+  scroll-padding-top: 80px; /* adjust based on navbar height */
+}
+
+#about {
+  padding-top: 120px; /* increased from 60px to add space */
+}
+
+#contact {
+  padding-top: 120px; /* increased from 60px to add space */
+}
+
+
 
       .contact-page {
           display: flex;
@@ -103,17 +153,63 @@
       .form-wrapper input[type="submit"]:hover {
           background-color: #45a049;
       }
-      
+
+      /* Sticky Black Header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #000 !important;  /* Force black background */
+  padding: 15px 0;
+}
+  /* border-top: 5px solid #000;        
+  border-bottom: 2px solid #1f1f1f;   */
+
+/* Logo Text */
+#header .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff !important;   /* Ensure white text */
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+  padding: 1px 5px;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #b300b3 !important; /* Purple hover/active effect */
+  /* border-bottom: 2px solid #b300b3; */
+}
       
             </style>
       
 
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top header-transparent">
+    <header id="header" class="fixed-top">
       <div class="container-fluid">
 
         <div class="row justify-content-center">
           <div class="col-xl-11 d-flex align-items-center">
+            <!-- <div class="logo">EVOLVE SECURITY SERVICES</div> -->
+
             <h1 class="logo mr-auto"><a href="#">EVOLVE SECURITY SERVICES</a></h1>
             <!-- Uncomment below if you prefer to use an image logo 
            <a href="#" class="logo mr-auto"><img src="static/base/Images/bedrock2.png" alt="BEDROCK" style="background-color:none"></a>-->
