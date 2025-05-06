@@ -6,17 +6,17 @@
   <title>Success</title>
 
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
-  <!-- Font Awesome for icons -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <style>
     body {
       margin: 0;
       padding: 0;
-      background: #252628;
-      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #1d1f21, #2c3e50);
+      font-family: 'Poppins', sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -24,44 +24,53 @@
     }
 
     .success-container {
-      background: #723129;
-      padding: 50px 40px;
-      border-radius: 12px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+      background: #ffffff10;
+      backdrop-filter: blur(15px);
+      -webkit-backdrop-filter: blur(15px);
+      padding: 40px 35px;
+      border-radius: 16px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
       text-align: center;
-      max-width: 400px;
+      max-width: 420px;
+      width: 90%;
+      border: 1px solid #ffffff20;
     }
 
     .success-container i {
-      font-size: 60px;
-      color: #28a745;
+      font-size: 70px;
+      color: #00e676;
       margin-bottom: 20px;
     }
 
     .success-container h1 {
-      font-size: 28px;
-      color: #333;
-      margin-bottom: 10px;
+      font-size: 30px;
+      color: #ffffff;
+      margin-bottom: 12px;
     }
 
     .success-container p {
-      color: #555;
+      color: #dcdcdc;
       font-size: 16px;
+      line-height: 1.5;
       margin-bottom: 30px;
     }
 
     .success-container a.button {
-      background: #28a745;
-      color: #fff;
-      padding: 12px 25px;
-      border-radius: 6px;
+      background: #00e676;
+      color: #121212;
+      padding: 12px 28px;
+      border-radius: 8px;
       text-decoration: none;
-      font-weight: 500;
-      transition: background 0.3s;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 12px rgba(0, 230, 118, 0.4);
     }
 
     .success-container a.button:hover {
-      background: #218838;
+      background: #00c853;
+      box-shadow: 0 6px 16px rgba(0, 230, 118, 0.6);
+      transform: translateY(-2px);
     }
   </style>
 </head>
@@ -70,10 +79,9 @@
   <div class="success-container">
     <i class="fas fa-check-circle"></i>
     <h1>Success!</h1>
-    <p>Your submission was completed successfully. Thank you for your response.</p>
+    <p>Your submission has been received. We appreciate your response!</p>
     <a href="{% url 'home' %}" class="button">Back to Home</a>
   </div>
 
 </body>
 </html>
-
