@@ -33,109 +33,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Template Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/security.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'myapp/security1.css' %}">
   </head>
 
   <style>
 
-      /* Sticky navbar */
-        /* nav {
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          background-color: #000;
-          padding: 15px 30px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        /* Nav text styling */
-        /* nav .logo {
-          font-size: 22px;
-          font-weight: 700;
-          color: white;
-        }
-
-        nav ul {
-          list-style: none;
-          display: flex;
-          gap: 25px;
-        }
-
-        nav ul li a {
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: color 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-          color: #b300b3;
-        } */ */
-
-        html {
-  scroll-padding-top: 80px; /* adjust based on navbar height */
-}
-
-#about {
-  padding-top: 120px; /* increased from 60px to add space */
-}
-
-#contact {
-  padding-top: 120px; /* increased from 60px to add space */
-}
-
-
-
-.contact-title h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 30px; /* Add some space below the title */
-    font-family: Arial, sans-serif;
-    color: #333;
-    font-size: 2.5em; /* Make the title stand out */
-}
-
-.form-wrapper {
-    /* Your existing form wrapper styles can go here */
-    width: 400px; /* Example width */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-    border-radius: 5px;
-}
-
-.form-wrapper label {
-    display: block; /* Make labels appear on their own line */
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-wrapper input[type="text"],
-.form-wrapper input[type="email"],
-.form-wrapper input[type="message"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    /* border: 1px solid #ddd; */
-    border-radius: 3px;
-    box-sizing: border-box; /* Ensure padding and border are within the element's width */
-}
-
-.form-wrapper input[type="submit"] {
-    background-color: #007bff; /* Example button color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.form-wrapper input[type="submit"]:hover {
-    background-color: #0056b3;
-}
 
 
 
@@ -194,122 +96,7 @@
   </style>
 
   <body>
-      .contact-page {
-          display: flex;
-          gap: 30px;
-          align-items: stretch; /* makes map and form same height */
-          margin-top: 20px;
-          flex-wrap: wrap; 
-          /* ensures it stacks on small screens */
-      }
-      
-      .map-section {
-          flex: 1;
-          min-width: 300px;
-          max-width: 50%
-          
-      }
-      
-      .map-section iframe {
-          width: 100%;
-          height: 100%;
-          border: none;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-          display: block;
-      }
-      
-      .form-wrapper {
-          flex: 1;
-          min-width: 300px;
-          max-width: 50%;
-          background: #f2eeee;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-          display: flex;
-          flex-direction: column;
-          justify-content: center; /* centers form content vertically */
-        
-      }
-      
-      .form-wrapper form {
-          display: flex;
-          flex-direction: column;
-      }
-      
-      .form-wrapper input[type="text"],
-      .form-wrapper input[type="email"],
-      .form-wrapper input[type="tel"],
-      .form-wrapper input[type="message"],
-      .form-wrapper select,
-      .form-wrapper textarea {
-          width: 100%;
-          padding: 10px;
-          margin-bottom: 10px;
-          border: 1px solid #ccc;
-          border-radius: 5px;
-      }
-      
-      .form-wrapper input[type="submit"] {
-          background-color: #4CAF50;
-          color: white;
-          padding: 12px;
-          border: none;
-          border-radius: 5px;
-          cursor: pointer;
-      }
-      
-      .form-wrapper input[type="submit"]:hover {
-          background-color: #45a049;
-      }
-
-      /* Sticky Black Header */
-#header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 999;
-  background-color: #000 !important;  /* Force black background */
-  padding: 15px 0;
-}
-  /* border-top: 5px solid #000;        
-  border-bottom: 2px solid #1f1f1f;   */
-
-/* Logo Text */
-#header .logo a {
-  font-size: 24px;
-  font-weight: 700;
-  color: #fff !important;   /* Ensure white text */
-  text-decoration: none;
-  letter-spacing: 1px;
-}
-
-/* Navigation Menu */
-.nav-menu ul {
-  list-style: none;
-  display: flex;
-  gap: 25px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-menu ul li a {
-  color: white !important;
-  font-weight: 600;
-  text-transform: uppercase;
-  transition: 0.3s;
-  padding: 1px 5px;
-}
-
-.nav-menu ul li a:hover,
-.nav-menu ul li a.active {
-  color: #b300b3 !important; /* Purple hover/active effect */
-  /* border-bottom: 2px solid #b300b3; */
-}
-      
-            </style>
+    
       
 
     <!-- ======= Header ======= -->
@@ -324,19 +111,12 @@
     
             <!-- Nav Menu -->
             <nav class="nav-menu">
-            <!-- <div class="logo">EVOLVE SECURITY SERVICES</div> -->
-
-            <h1 class="logo mr-auto"><a href="#">EVOLVE SECURITY SERVICES</a></h1>
-            <!-- Uncomment below if you prefer to use an image logo 
-           <a href="#" class="logo mr-auto"><img src="static/base/Images/bedrock2.png" alt="BEDROCK" style="background-color:none"></a>-->
 
             <nav class="nav-menu d-none d-lg-block">
               <ul>
                 <li class="active"><a href="#">Home</a></li>
                 <li><a href="#about">About US</a></li>
                 <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
             </nav>
@@ -485,7 +265,6 @@
             <div class="col-md-4 mb-4">
               <div class="card h-100">
                 <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
-                <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
                 <div class="card-body">
                   <h5 class="card-title">HOUSE KEEPING</h5>
                   <p class="card-text">
@@ -505,7 +284,6 @@
             <div class="col-md-4 mb-4">
               <div class="card h-100">
                 <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
-                <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
                 <div class="card-body">
                   <h5 class="card-title">SECURITY GUARD SERVICES</h5>
                   <p class="card-text">
@@ -524,7 +302,6 @@
             <!-- Bouncer Services Card -->
             <div class="col-md-4 mb-4">
               <div class="card h-100">
-                <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
                 <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
                 <div class="card-body">
                   <h5 class="card-title">BOUNCER SERVICES</h5>
@@ -578,11 +355,11 @@ section {
   flex: 1;
   min-width: 300px;
   max-width: 500px;
+  height: 500px;
 }
 
 .map-section iframe {
-  width: 100%;
-  height: 400px;
+
   border-radius: 12px;
   border: 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -617,6 +394,7 @@ section {
 .form-wrapper input[type="text"],
 .form-wrapper input[type="email"],
 .form-wrapper input[type="tel"],
+.form-wrapper input[type="message"],
 .form-wrapper select,
 .form-wrapper textarea {
   width: 100%;
@@ -639,8 +417,8 @@ section {
   font-size: 16px;
   font-weight: bold;
   border: none;
-  border-radius: 6px;
-  height: 45px;
+  border-radius: 5px;
+  height: auto;
   cursor: pointer;
   transition: background-color 0.3s;
 }
@@ -682,24 +460,13 @@ section {
       display: flex;
       flex-direction: column;
       gap: 10px;
-      max-height: 400px; /* Adjust height here */
-      overflow-y: auto;
+      max-height: 550px; /* Adjust height here */
+  
     }
 
     .form-wrapper form select {
       height: 40px; /* Shrinks the Service dropdown */
     }
-
-    /* .form-wrapper form textarea {
-      height: 120px;
-      resize: vertical;
-    } */
-    /* .form-wrapper form textarea {
-      height: 600px;
-      padding: 10px;
-      resize: vertical;
-      font-family: inherit; 
-      font-size: 14px; */
 
 
   </style>    
@@ -712,13 +479,14 @@ section {
           <div class="contact-page">
             <div class="map-section" style="max-height: 400px; overflow: hidden;">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.325434208527!2d80.20105907507718!3d13.014936187304464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671455555557%3A0xc132a69138b8fdf6!2sOlympia%20Technology%20Park!5e0!3m2!1sen!2sin!4v1746531228287!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"  
-                allowfullscreen="" 
-                loading="lazy" 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.325434208527!2d80.20105907507718!3d13.014936187304464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671455555557%3A0xc132a69138b8fdf6!2sOlympia%20Technology%20Park!5e0!3m2!1sen!2sin!4v1746531228287!5m2!1sen!2sin" 
+                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                allowfullscreen=""
+                loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
             </div>
-            <div class="form-wrapper" style="max-height: 400px; overflow-y: auto;">
+            <div class="form-wrapper" style="max-height: 400px; overflow: auto;" >
               <form action="{% url 'submit' %}" method="post" style="display: flex; flex-direction: column; gap: 10px;">
                 {% csrf_token %}
             
@@ -781,7 +549,6 @@ section {
 
         </div>
       </section><!-- End Contact Section -->
-
     </main><!-- End #main -->
 
     <!-- ======= Footer ======= -->
@@ -801,8 +568,6 @@ section {
                 <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#about">About us</a></li>
                 <li><i class="ion-ios-arrow-right"></i> <a href="#services">Services</a></li>
-                <!--<li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>-->
               </ul>
             </div>
 
