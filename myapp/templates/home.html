@@ -34,10 +34,71 @@
 
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{% static 'myapp/security1.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
 
   <style>
 
+    
+
+#about {
+  padding-top: 120px; /* increased from 60px to add space */
+}
+
+#contact {
+  padding-top: 120px; /* increased from 60px to add space */
+}
+
+
+
+.contact-title h2 {
+    text-align: center; /* Center the title */
+    margin-bottom: 30px; /* Add some space below the title */
+    font-family: Arial, sans-serif;
+    color: #333;
+    font-size: 2.5em; /* Make the title stand out */
+}
+
+.form-wrapper {
+    /* Your existing form wrapper styles can go here */
+    width: 400px; /* Example width */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+}
+
+.form-wrapper label {
+    display: block; /* Make labels appear on their own line */
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-wrapper input[type="text"],
+.form-wrapper input[type="email"],
+.form-wrapper input[type="message"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    /* border: 1px solid #ddd; */
+    border-radius: 3px;
+    box-sizing: border-box; /* Ensure padding and border are within the element's width */
+}
+
+.form-wrapper input[type="submit"] {
+    background-color: #800080; /* Example button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-wrapper input[type="submit"]:hover {
+    background-color: #0056b3;
+}
 
 
 
@@ -96,13 +157,16 @@
   </style>
 
   <body>
-    
+      
+            </style>
+
       
 
     <!-- ======= Header ======= -->
     <header id="header" class="fixed-top">
       <div class="container-fluid">
         <div class="row justify-content-center">
+          <div class="col-xl-11 d-flex align-items-center justify-content-between">
           <div class="col-xl-11 d-flex align-items-center">
             <h1 class="logo mr-auto"><a href="#">EVOLVE</a></h1>
     
@@ -111,16 +175,18 @@
     
             <!-- Nav Menu -->
             <nav class="nav-menu">
-
-            <nav class="nav-menu d-none d-lg-block">
-              <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About US</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-              </ul>
-            </nav>
-    
+           
+           
+           <nav class="nav-menu" id="nav-links">
+            <ul class="menu-list mb-0">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About US</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          
+           
           </div>
         </div>
       </div>
@@ -258,7 +324,7 @@
       
       <section id="services" style="background-color: #dbf6e9">
         <div class="container my-5">
-          <h2 class="text-center mb-4">OUR SERVICES</h2>
+          <h3 class="text-center mb-4"> <strong>OUR SERVICES</strong></h3>
           <div class="row justify-content-center">
         
             <!-- Housekeeping Card -->
@@ -406,26 +472,6 @@ section {
   box-sizing: border-box;
 }
 
-.form-wrapper textarea {
-  resize: vertical;
-  height: 100px;
-}
-
-.form-wrapper input[type="submit"] {
-  background-color: #4CAF50;
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-  height: auto;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.form-wrapper input[type="submit"]:hover {
-  background-color: #45a049;
-}
 
 /* Mobile-friendly */
 @media (max-width: 768px) {
@@ -451,7 +497,7 @@ section {
     
     .map-section iframe {
       width: 100%;
-      max-height: 400px; /* Adjust height here */
+      max-height: 900px; /* Adjust height here */
       border: none;
       border-radius: 10px;
     }
@@ -468,12 +514,46 @@ section {
       height: 40px; /* Shrinks the Service dropdown */
     }
 
+    .social-links-modern {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.social-icon.twitter:hover { background-color: #1DA1F2; }
+.social-icon.facebook:hover { background-color: #1877F2; }
+.social-icon.instagram:hover { background-color: #E4405F; }
+.social-icon.linkedin:hover { background-color: #0077B5; }
+.social-icon.whatsapp:hover { background-color: #25D366; }
+
+
 
   </style>    
       <section id="contact" class="section-bg" style="background-color: #cdfffc;">
         <div class="container" data-aos="fade-up">
           <div class="contact-title">
-            <h2 class="text-center mb-4">CONTACT US </h2>
+            <h3 class="text-center mb-4"><strong>CONTACT US</strong> </h3>
           </div>
 
           <div class="contact-page">
@@ -581,13 +661,14 @@ section {
                 <strong>Email:</strong> evolvesolutions@gmail.com<br>
               </p>
 
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                <a href="https://wa.me/919876543210" class="whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a>
+              <div class="social-links-modern">
+                <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/919876543210" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
               </div>
+              
               
             </div>
 
