@@ -38,6 +38,56 @@
 
   <style>
 
+      /* Sticky navbar */
+        /* nav {
+          position: sticky;
+          top: 0;
+          z-index: 1000;
+          background-color: #000;
+          padding: 15px 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        /* Nav text styling */
+        /* nav .logo {
+          font-size: 22px;
+          font-weight: 700;
+          color: white;
+        }
+
+        nav ul {
+          list-style: none;
+          display: flex;
+          gap: 25px;
+        }
+
+        nav ul li a {
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          transition: color 0.3s;
+        }
+
+        nav ul li a:hover,
+        nav ul li a.active {
+          color: #b300b3;
+        } */ */
+
+        html {
+  scroll-padding-top: 80px; /* adjust based on navbar height */
+}
+
+#about {
+  padding-top: 120px; /* increased from 60px to add space */
+}
+
+#contact {
+  padding-top: 120px; /* increased from 60px to add space */
+}
+
+
 
 .contact-title h2 {
     text-align: center; /* Center the title */
@@ -144,9 +194,126 @@
   </style>
 
   <body>
+      .contact-page {
+          display: flex;
+          gap: 30px;
+          align-items: stretch; /* makes map and form same height */
+          margin-top: 20px;
+          flex-wrap: wrap; 
+          /* ensures it stacks on small screens */
+      }
+      
+      .map-section {
+          flex: 1;
+          min-width: 300px;
+          max-width: 50%
+          
+      }
+      
+      .map-section iframe {
+          width: 100%;
+          height: 100%;
+          border: none;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          display: block;
+      }
+      
+      .form-wrapper {
+          flex: 1;
+          min-width: 300px;
+          max-width: 50%;
+          background: #f2eeee;
+          padding: 30px;
+          border-radius: 10px;
+          box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+          display: flex;
+          flex-direction: column;
+          justify-content: center; /* centers form content vertically */
+        
+      }
+      
+      .form-wrapper form {
+          display: flex;
+          flex-direction: column;
+      }
+      
+      .form-wrapper input[type="text"],
+      .form-wrapper input[type="email"],
+      .form-wrapper input[type="tel"],
+      .form-wrapper input[type="message"],
+      .form-wrapper select,
+      .form-wrapper textarea {
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: 1px solid #ccc;
+          border-radius: 5px;
+      }
+      
+      .form-wrapper input[type="submit"] {
+          background-color: #4CAF50;
+          color: white;
+          padding: 12px;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+      }
+      
+      .form-wrapper input[type="submit"]:hover {
+          background-color: #45a049;
+      }
+
+      /* Sticky Black Header */
+#header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #000 !important;  /* Force black background */
+  padding: 15px 0;
+}
+  /* border-top: 5px solid #000;        
+  border-bottom: 2px solid #1f1f1f;   */
+
+/* Logo Text */
+#header .logo a {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff !important;   /* Ensure white text */
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-menu ul li a {
+  color: white !important;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+  padding: 1px 5px;
+}
+
+.nav-menu ul li a:hover,
+.nav-menu ul li a.active {
+  color: #b300b3 !important; /* Purple hover/active effect */
+  /* border-bottom: 2px solid #b300b3; */
+}
+      
+            </style>
+      
 
     <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top header-transparent">
+    <header id="header" class="fixed-top">
       <div class="container-fluid">
         <div class="row justify-content-center">
           <div class="col-xl-11 d-flex align-items-center">
@@ -157,10 +324,19 @@
     
             <!-- Nav Menu -->
             <nav class="nav-menu">
+            <!-- <div class="logo">EVOLVE SECURITY SERVICES</div> -->
+
+            <h1 class="logo mr-auto"><a href="#">EVOLVE SECURITY SERVICES</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo 
+           <a href="#" class="logo mr-auto"><img src="static/base/Images/bedrock2.png" alt="BEDROCK" style="background-color:none"></a>-->
+
+            <nav class="nav-menu d-none d-lg-block">
               <ul>
                 <li class="active"><a href="#">Home</a></li>
-                <li><a href="#About">About US</a></li>
+                <li><a href="#about">About US</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+
                 <li><a href="#contact">Contact Us</a></li>
               </ul>
             </nav>
@@ -180,23 +356,22 @@
           <ol class="carousel-indicators"></ol>
 
           <div class="carousel-inner" role="listbox">
-
-            <div class="carousel-item active" style="background-image: url(static/base/Images/Bedrock5.jpg)">
+            <img src="{% static 'images/HousekeepingS.jpeg' %}" class="card-img-top" alt="Housekeeping">
               <div class="carousel-container">
                 <div class="container">
                   <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
+                  <p class="animate__animated animate__fadeInUp">Evolve Security Services is dedicated to providing top-tier security solutions with a focus on reliability, professionalism, and innovation. We safeguard homes, businesses, and events with expert personnel and advanced technology, ensuring complete peace of mind.</p>
                   <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
                 </div>
               </div>
             </div>
 
-            <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock2.jpg)">
+            <img src="{% static 'images/HousekeepingS.jpeg' %}" class="card-img-top" alt="Housekeeping">
               <div class="carousel-container">
                 <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
-                  <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                  <!-- <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
+                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p> -->
+                  <!-- <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
                 </div>
               </div>
             </div>
@@ -255,7 +430,7 @@
 
           <header class="section-header">
             <h3>About Us</h3>
-            <p>Evolve Holdings Ltd was registered and started operations in 2002. We are a major private security services provider with assignments spread across the country.The company offers integrated security solutions manned and electronic security to companies, organizations, institutions, businesses and individuals.</p>
+            <p>Evolve Security Services is a trusted name in providing comprehensive security and facility solutions. With a team of trained professionals and cutting-edge technology, we ensure complete protection for residential, commercial, and event needs. Our commitment to integrity, discipline, and reliability sets us apart. Whether it’s guarding, housekeeping, or bouncer services — we deliver with excellence. Your safety is our top priority, 24/7.</p>
           </header>
 
           <div class="row about-cols">
@@ -268,8 +443,7 @@
                 </div>
                 <h2 class="title"><a href="#">Our Mission</a></h2>
                 <p>
-                  To be the private security services provider of choice in Eastern and Central Africa through intelligence and resource sharing.
-                </p>
+                  To deliver reliable, innovative, and professional security services that ensure peace of mind for individuals, businesses, and communities.                </p>
               </div>
             </div>
 
@@ -281,8 +455,7 @@
                 </div>
                 <h2 class="title"><a href="#">Our Philosophy</a></h2>
                 <p>
-                  We believe in delivery of excellence and total fulfillment of clients' security and related needs, by strict adherence to integrity and loyalty.
-                </p>
+                  We believe in integrity, commitment, and continuous improvement to provide exceptional protection and build lasting trust with our clients.                </p>
               </div>
             </div>
 
@@ -294,8 +467,7 @@
                 </div>
                 <h2 class="title"><a href="#">Our Vision</a></h2>
                 <p>
-                  To be the private security services provider of choice in Eastern and Central Africa through intelligence and resource sharing.
-                </p>
+                  To become the most trusted and advanced security service provider, setting new standards in safety, service excellence, and client satisfaction.                </p>
               </div>
             </div>
 
@@ -312,6 +484,7 @@
             <!-- Housekeeping Card -->
             <div class="col-md-4 mb-4">
               <div class="card h-100">
+                <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
                 <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
                 <div class="card-body">
                   <h5 class="card-title">HOUSE KEEPING</h5>
@@ -332,6 +505,7 @@
             <div class="col-md-4 mb-4">
               <div class="card h-100">
                 <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
+                <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
                 <div class="card-body">
                   <h5 class="card-title">SECURITY GUARD SERVICES</h5>
                   <p class="card-text">
@@ -350,6 +524,7 @@
             <!-- Bouncer Services Card -->
             <div class="col-md-4 mb-4">
               <div class="card h-100">
+                <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
                 <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
                 <div class="card-body">
                   <h5 class="card-title">BOUNCER SERVICES</h5>
@@ -489,6 +664,45 @@ section {
 
       </style>
 
+    <style>
+    .contact-page {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+    
+    .map-section iframe {
+      width: 100%;
+      max-height: 400px; /* Adjust height here */
+      border: none;
+      border-radius: 10px;
+    }
+    
+    .form-wrapper form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-height: 400px; /* Adjust height here */
+      overflow-y: auto;
+    }
+
+    .form-wrapper form select {
+      height: 40px; /* Shrinks the Service dropdown */
+    }
+
+    /* .form-wrapper form textarea {
+      height: 120px;
+      resize: vertical;
+    } */
+    /* .form-wrapper form textarea {
+      height: 600px;
+      padding: 10px;
+      resize: vertical;
+      font-family: inherit; 
+      font-size: 14px; */
+
+
+  </style>    
       <section id="contact" class="section-bg" style="background-color: #cdfffc;">
         <div class="container" data-aos="fade-up">
           <div class="contact-title">
@@ -496,28 +710,29 @@ section {
           </div>
 
           <div class="contact-page">
-            <div class="map-section">
+            <div class="map-section" style="max-height: 400px; overflow: hidden;">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5063648009475!2d76.949382!3d10.990451!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba857d1f4cc6fbb%3A0xdeadbeef12345678!2sCoimbatore!5e0!3m2!1sen!2sin!4v1683000000000!5m2!1sen!2sin"  
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.325434208527!2d80.20105907507718!3d13.014936187304464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671455555557%3A0xc132a69138b8fdf6!2sOlympia%20Technology%20Park!5e0!3m2!1sen!2sin!4v1746531228287!5m2!1sen!2sin" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>"  
                 allowfullscreen="" 
                 loading="lazy" 
                 referrerpolicy="no-referrer-when-downgrade">
               </iframe>
-            </div><div class="form-wrapper">
-              <form action="{% url 'submit' %}" method="post">
+            </div>
+            <div class="form-wrapper" style="max-height: 400px; overflow-y: auto;">
+              <form action="{% url 'submit' %}" method="post" style="display: flex; flex-direction: column; gap: 10px;">
                 {% csrf_token %}
             
                 <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" style="height: 40px;">
             
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" style="height: 40px;">
             
                 <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone">
+                <input type="tel" id="phone" name="phone" style="height: 40px;">
             
                 <label for="services">Service:</label>
-                <select id="services" name="services" required>
+                <select name="service" id="service" style="height: 40px;">
                   <option value="">Select service</option>
                   <option value="security service">Security Service</option>
                   <option value="housekeeping">Housekeeping</option>
@@ -525,7 +740,8 @@ section {
                 </select>
             
                 <label for="message">Message:</label>
-                <textarea id="message" name="message"></textarea>
+                <input type="message" id="message" name="message" style="height: 400px;">
+
             
                 <input type="submit" value="Submit">
               </form>
