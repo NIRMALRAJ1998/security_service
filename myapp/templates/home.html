@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Template Main CSS File -->
     <link rel="stylesheet" type="text/css" href="{% static 'myapp/security.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
   </head>
 
 
@@ -33,46 +35,7 @@
     
     <style>
 
-      /* Sticky navbar */
-        /* nav {
-          position: sticky;
-          top: 0;
-          z-index: 1000;
-          background-color: #000;
-          padding: 15px 30px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-
-        /* Nav text styling */
-        /* nav .logo {
-          font-size: 22px;
-          font-weight: 700;
-          color: white;
-        }
-
-        nav ul {
-          list-style: none;
-          display: flex;
-          gap: 25px;
-        }
-
-        nav ul li a {
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: color 0.3s;
-        }
-
-        nav ul li a:hover,
-        nav ul li a.active {
-          color: #b300b3;
-        } */ */
-
-        html {
-  scroll-padding-top: 80px; /* adjust based on navbar height */
-}
+    
 
 #about {
   padding-top: 120px; /* increased from 60px to add space */
@@ -198,8 +161,63 @@
   color: #b300b3 !important; /* Purple hover/active effect */
   /* border-bottom: 2px solid #b300b3; */
 }
+
+/* Show hamburger only on mobile */
+.menu-toggle {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 991px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-menu ul {
+    display: none;
+    flex-direction: column;
+    background-color: black;
+    padding: 10px;
+  }
+
+  .nav-menu ul.active {
+    display: flex;
+  }
+}
+
+/* Mobile hidden menu by default */
+.menu-list {
+  display: none;
+  flex-direction: column;
+  background-color: #000;
+  padding: 10px;
+  position: absolute;
+  right: 10px;
+  top: 60px;
+  border-radius: 8px;
+  z-index: 999;
+}
+
+/* Show menu when active */
+.menu-list.active {
+  display: flex;
+}
+
+/* Show full nav on large screens */
+@media (min-width: 992px) {
+  .menu-list {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+  }
+}
+
       
             </style>
+
       
 
     <!-- ======= Header ======= -->
@@ -207,22 +225,24 @@
       <div class="container-fluid">
 
         <div class="row justify-content-center">
-          <div class="col-xl-11 d-flex align-items-center">
+          <div class="col-xl-11 d-flex align-items-center justify-content-between">
             <!-- <div class="logo">EVOLVE SECURITY SERVICES</div> -->
 
             <h1 class="logo mr-auto"><a href="#">EVOLVE SECURITY SERVICES</a></h1>
+            <div class="menu-toggle d-lg-none" id="mobile-menu">&#9776;</div>
+
             <!-- Uncomment below if you prefer to use an image logo 
            <a href="#" class="logo mr-auto"><img src="static/base/Images/bedrock2.png" alt="BEDROCK" style="background-color:none"></a>-->
 
-            <nav class="nav-menu d-none d-lg-block">
-              <ul>
-                <li class="active"><a href="#">Home</a></li>
-                <li><a href="#about">About US</a></li>
-                <li><a href="#services">Services</a></li>
-
-                <li><a href="#contact">Contact Us</a></li>
-              </ul>
-            </nav>
+           <nav class="nav-menu" id="nav-links">
+            <ul class="menu-list mb-0">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#about">About US</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </nav>
+          
           </div>
         </div>
 
@@ -432,7 +452,7 @@
     
     .map-section iframe {
       width: 100%;
-      max-height: 400px; /* Adjust height here */
+      max-height: 900px; /* Adjust height here */
       border: none;
       border-radius: 10px;
     }
@@ -449,16 +469,43 @@
       height: 40px; /* Shrinks the Service dropdown */
     }
 
-    /* .form-wrapper form textarea {
-      height: 120px;
-      resize: vertical;
-    } */
-    /* .form-wrapper form textarea {
-      height: 600px;
-      padding: 10px;
-      resize: vertical;
-      font-family: inherit; 
-      font-size: 14px; */
+
+    .social-links-modern {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.social-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  color: #333;
+  font-size: 18px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.social-icon.twitter:hover { background-color: #1DA1F2; }
+.social-icon.facebook:hover { background-color: #1877F2; }
+.social-icon.instagram:hover { background-color: #E4405F; }
+.social-icon.linkedin:hover { background-color: #0077B5; }
+.social-icon.whatsapp:hover { background-color: #25D366; }
+
+
+
+
 
 
   </style>    
@@ -575,13 +622,14 @@
                 <strong>Email:</strong> evolvesolutions@gmail.com<br>
               </p>
 
-              <div class="social-links">
-                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
-                <a href="https://wa.me/919876543210" class="whatsapp" target="_blank"><i class="fa fa-whatsapp"></i></a>
+              <div class="social-links-modern">
+                <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/919876543210" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
               </div>
+              
               
             </div>
 
@@ -605,6 +653,18 @@
 
 
     <!-- Template Main JS File -->
+
+<script>
+  const toggleButton = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.menu-list');
+
+  toggleButton.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+  });
+</script>
+
+
+    
     <script src="{% static 'myapp/main.js' %}"></script>
 
   </body>
