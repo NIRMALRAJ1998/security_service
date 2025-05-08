@@ -1,708 +1,379 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
+      {% load static %}
+      <!DOCTYPE html>
+      <html lang="en">
 
-  <head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <head>
+          <meta charset="utf-8">
+          <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>EVOLVE SECURITIES</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
+          <title>EVOLVE SECURITIES</title>
+          <meta content="" name="description">
+          <meta content="" name="keywords">
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon">
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+          <!-- Favicons -->
+          <link href="assets/img/favicon.png" rel="icon">
+          <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+          <!-- Google Fonts -->
+          <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/venobox/venobox.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-    <link href="{% static 'base/vendor/aos/aos.css' %}" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-
-    <!-- Template Main CSS File -->
-    <link rel="stylesheet" type="text/css" href="{% static 'myapp/security1.css' %}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-  </head>
-
-  <style>
-
-    
-
-#about {
-  padding-top: 120px; /* increased from 60px to add space */
-}
-
-#contact {
-  padding-top: 120px; /* increased from 60px to add space */
-}
-
-
-
-.contact-title h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 30px; /* Add some space below the title */
-    font-family: Arial, sans-serif;
-    color: #333;
-    font-size: 2.5em; /* Make the title stand out */
-}
-
-.form-wrapper {
-    /* Your existing form wrapper styles can go here */
-    width: 400px; /* Example width */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-    border-radius: 5px;
-}
-
-.form-wrapper label {
-    display: block; /* Make labels appear on their own line */
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-wrapper input[type="text"],
-.form-wrapper input[type="email"],
-.form-wrapper input[type="message"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    /* border: 1px solid #ddd; */
-    border-radius: 3px;
-    box-sizing: border-box; /* Ensure padding and border are within the element's width */
-}
-
-.form-wrapper input[type="submit"] {
-    background-color: #800080; /* Example button color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.form-wrapper input[type="submit"]:hover {
-    background-color: #0056b3;
-}
-
-
-
-/* Desktop Menu - default */
-.nav-menu {
-  display: flex;
-  gap: 20px;
-}
-
-
-/* Hide nav by default on mobile */
-@media (max-width: 991px) {
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    background: #000;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 20px 0;
-    z-index: 999;
-  }
-
-  .nav-menu.mobile-nav {
-    display: flex !important;
-  }
-
-  .nav-menu ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  .nav-menu ul li {
-    margin: 10px 0;
-  }
-
-  .mobile-nav-toggle {
-    display: block;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    font-size: 28px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-}
-
-
-
-  </style>
-
-  <body>
-      
-            </style>
-
+          <!-- Vendor CSS Files -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+          <link href="{% static 'base/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/icofont/icofont.min.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/ionicons/css/ionicons.min.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/animate.css/animate.min.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/venobox/venobox.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/owl.carousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
+          <link href="{% static 'base/vendor/aos/aos.css' %}" rel="stylesheet">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
       
 
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top">
-      <div class="container-fluid">
-        <div class="row justify-content-center">
-          <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <div class="col-xl-11 d-flex align-items-center">
-            <h1 class="logo mr-auto"><a href="#">EVOLVE</a></h1>
-    
-            <!-- ☰ Mobile nav toggle -->
-            <button class="mobile-nav-toggle d-lg-none" type="button">☰</button>
-    
-            <!-- Nav Menu -->
-            <nav class="nav-menu">
-           
-           
-           <nav class="nav-menu" id="nav-links">
-            <ul class="menu-list mb-0">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#about">About US</a></li>
-              <li><a href="#services">Services</a></li>
-              <li><a href="#contact">Contact Us</a></li>
-            </ul>
-          </nav>
+          <!-- Template Main CSS File -->
+          <link rel="stylesheet" type="text/css" href="{% static 'myapp/security1.css' %}">
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        </head>
+
+        <body>
+          <!-- ======= Header ======= -->
+          <header id="header" class="fixed-top">
+            <div class="container-fluid">
+              <div class="row justify-content-center">
+                <div class="col-xl-11 d-flex align-items-center justify-content-between">
+                <div class="col-xl-11 d-flex align-items-center">
+                  <h1 class="logo mr-auto"><a href="#">EVOLVE</a></h1>
           
-           
-          </div>
-        </div>
-      </div>
-    </header>
-    
-    
-
-    <!-- ======= Intro Section ======= -->
-    <section id="intro">
-      <div class="intro-container">
-        <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
-
-          <ol class="carousel-indicators"></ol>
-
-          <div class="carousel-inner" role="listbox">
-            <img src="{% static 'images/HousekeepingS.jpeg' %}" class="card-img-top" alt="Housekeeping">
-              <div class="carousel-container">
-                <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Evolve Security Services is dedicated to providing top-tier security solutions with a focus on reliability, professionalism, and innovation. We safeguard homes, businesses, and events with expert personnel and advanced technology, ensuring complete peace of mind.</p>
-                  <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                  <!-- ☰ Mobile nav toggle -->
+                  <button class="mobile-nav-toggle d-lg-none" type="button">☰</button>
+          
+                  <!-- Nav Menu -->
+                  <nav class="nav-menu">
+                
+                
+                <nav class="nav-menu" id="nav-links">
+                  <ul class="menu-list mb-0">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About US</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                  </ul>
+                </nav>
                 </div>
               </div>
             </div>
-
-            <img src="{% static 'images/HousekeepingS.jpeg' %}" class="card-img-top" alt="Housekeeping">
-              <div class="carousel-container">
-                <div class="container">
-                  <!-- <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p> -->
-                  <!-- <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a> -->
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock6.jpg)">
-              <div class="carousel-container">
-                <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
-                  <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock1.jpg)">
-              <div class="carousel-container">
-                <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
-                  <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
-                </div>
-              </div>
-            </div>
-
-            <div class="carousel-item" style="background-image: url(static/base/Images/Bedrock4.png)">
-              <div class="carousel-container">
-                <div class="container">
-                  <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
-                  <p class="animate__animated animate__fadeInUp">Your Safety Is Our Business.</p>
-                  <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-
-          <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-
-        </div>
-      </div>
-    </section><!-- End Intro Section -->
-
-    <main id="main">
-
-      <!-- ======= About Us Section ======= -->
-      <section id="about" style="background-color: red;">
-        <div class="container" data-aos="fade-up">
-
-          <header class="section-header">
-            <h3>About Us</h3>
-            <p>Evolve Security Services is a trusted name in providing comprehensive security and facility solutions. With a team of trained professionals and cutting-edge technology, we ensure complete protection for residential, commercial, and event needs. Our commitment to integrity, discipline, and reliability sets us apart. Whether it’s guarding, housekeeping, or bouncer services — we deliver with excellence. Your safety is our top priority, 24/7.</p>
           </header>
+          
 
-          <div class="row about-cols">
+          <!-- ======= Intro Section ======= -->
+          <section id="intro">
+            <div class="intro-container">
+              <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+                <ol class="carousel-indicators"></ol>
+                <div class="carousel-inner" role="listbox">
+                  <img src="{% static 'images/HousekeepingS.jpeg' %}" class="card-img-top" alt="Housekeeping">
+                    <div class="carousel-container">
+                      <div class="container">
+                        <h2 class="animate__animated animate__fadeInDown">Evolve Security Services</h2>
+                        <p class="animate__animated animate__fadeInUp">Evolve Security Services is dedicated to providing top-tier security solutions with a focus on reliability, professionalism, and innovation. We safeguard homes, businesses, and events with expert personnel and advanced technology, ensuring complete peace of mind.</p>
+                        <a href="#about" class="btn-get-started scrollto animate__animated animate__fadeInUp">Get Started</a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+          </section><!-- End Intro Section -->
 
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-              <div class="about-col">
-                <div class="img">
-                  <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
-                  <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+          <main id="main">
+
+            <!-- ======= About Us Section ======= -->
+            <section id="about" style="background-color: red;">
+              <div class="container" data-aos="fade-up">
+
+                <header class="section-header">
+                  <h3>About Us</h3>
+                  <p>Evolve Security Services is a trusted name in providing comprehensive security and facility solutions. With a team of trained professionals and cutting-edge technology, we ensure complete protection for residential, commercial, and event needs. Our commitment to integrity, discipline, and reliability sets us apart. Whether it’s guarding, housekeeping, or bouncer services — we deliver with excellence. Your safety is our top priority, 24/7.</p>
+                </header>
+
+                <div class="row about-cols">
+
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="about-col">
+                      <div class="img">
+                        <img src="assets/img/about-mission.jpg" alt="" class="img-fluid">
+                        <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+                      </div>
+                      <h2 class="title"><a href="#">Our Mission</a></h2>
+                      <p>
+                        To deliver reliable, innovative, and professional security services that ensure peace of mind for individuals, businesses, and communities.                </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="about-col">
+                      <div class="img">
+                        <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
+                        <div class="icon"><i class="ion-ios-list-outline"></i></div>
+                      </div>
+                      <h2 class="title"><a href="#">Our Philosophy</a></h2>
+                      <p>
+                        We believe in integrity, commitment, and continuous improvement to provide exceptional protection and build lasting trust with our clients.                </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="about-col">
+                      <div class="img">
+                        <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
+                        <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+                      </div>
+                      <h2 class="title"><a href="#">Our Vision</a></h2>
+                      <p>
+                        To become the most trusted and advanced security service provider, setting new standards in safety, service excellence, and client satisfaction.                </p>
+                    </div>
+                  </div>
+
                 </div>
-                <h2 class="title"><a href="#">Our Mission</a></h2>
-                <p>
-                  To deliver reliable, innovative, and professional security services that ensure peace of mind for individuals, businesses, and communities.                </p>
+
               </div>
-            </div>
-
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-              <div class="about-col">
-                <div class="img">
-                  <img src="assets/img/about-plan.jpg" alt="" class="img-fluid">
-                  <div class="icon"><i class="ion-ios-list-outline"></i></div>
-                </div>
-                <h2 class="title"><a href="#">Our Philosophy</a></h2>
-                <p>
-                  We believe in integrity, commitment, and continuous improvement to provide exceptional protection and build lasting trust with our clients.                </p>
-              </div>
-            </div>
-
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-              <div class="about-col">
-                <div class="img">
-                  <img src="assets/img/about-vision.jpg" alt="" class="img-fluid">
-                  <div class="icon"><i class="ion-ios-eye-outline"></i></div>
-                </div>
-                <h2 class="title"><a href="#">Our Vision</a></h2>
-                <p>
-                  To become the most trusted and advanced security service provider, setting new standards in safety, service excellence, and client satisfaction.                </p>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section><!-- End About Us Section -->
-      
-      <section id="services" style="background-color: #dbf6e9">
-        <div class="container my-5">
-          <h3 class="text-center mb-4"> <strong>OUR SERVICES</strong></h3>
-          <div class="row justify-content-center">
-        
-            <!-- Housekeeping Card -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
-                <div class="card-body">
-                  <h5 class="card-title">HOUSE KEEPING</h5>
-                  <p class="card-text">
-                    Professional cleaning, organizing, and maintenance services to ensure a spotless environment.
-                  </p>
-                  <ul>
-                    <li>✅ Daily or scheduled cleaning routines</li>
-                    <li>✅ Homes, offices, and commercial buildings</li>
-                    <li>✅ Dusting, mopping, vacuuming, and sanitizing</li>
-                    <li>✅ Trusted, trained, and verified cleaners</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        
-            <!-- Security Guard Card -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
-                <div class="card-body">
-                  <h5 class="card-title">SECURITY GUARD SERVICES</h5>
-                  <p class="card-text">
-                    Trusted security personnel offering surveillance, access control, and emergency response services.
-                  </p>
-                  <ul>
-                    <li>✅ 24/7 on-site security</li>
-                    <li>✅ Residential, corporate & industrial coverage</li>
-                    <li>✅ Patrol, monitoring, and access control</li>
-                    <li>✅ Emergency-ready trained personnel</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-        
-            <!-- Bouncer Services Card -->
-            <div class="col-md-4 mb-4">
-              <div class="card h-100">
-                <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
-                <div class="card-body">
-                  <h5 class="card-title">BOUNCER SERVICES</h5>
-                  <p class="card-text">
-                    Experienced bouncers ensuring crowd control, safety, and smooth event operations.
-                  </p>
-                    <li>✅ Physically fit and professionally trained</li>
-                    <li>✅ Party, club, and concert security services solutions</li>
-                    <li>✅ Crowd risk assessment, management & mitigation</li>
-                    <li>✅ Ensuring safety with professionalism</li>
-                  </ul>
-                </div>
-              </div>
-            </div>       
-          </div>
-        </div>        
-      </section>
-
-
-      <!-- ======= Contact Section ======= -->
-       <style>
-        /* Base styles */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #d7fcfb;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-section {
-  scroll-margin-top: 80px; /* Adjust based on navbar height */
-}
-
-/* Flex container: map on left, form on right */
-.contact-page {
-  display: flex;
-  flex-direction: row; /* left to right */
-  justify-content: center;
-  align-items: flex-start;
-  gap: 50px;
-  padding: 40px 20px;
-  flex-wrap: wrap;
-}
-
-/* Map Section (LEFT) */
-.map-section {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  height: 500px;
-}
-
-.map-section iframe {
-
-  border-radius: 12px;
-  border: 0;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-/* Form Section (RIGHT) */
-.form-wrapper {
-  flex: 1;
-  min-width: 300px;
-  max-width: 500px;
-  background: #ffffff;
-  padding: 25px 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-}
-
-.form-wrapper h2 {
-  margin-bottom: 20px;
-  color: #333;
-}
-
-.form-wrapper form {
-  display: flex;
-  flex-direction: column;
-}
-
-.form-wrapper label {
-  margin-bottom: 5px;
-  font-weight: bold;
-}
-
-.form-wrapper input[type="text"],
-.form-wrapper input[type="email"],
-.form-wrapper input[type="tel"],
-.form-wrapper input[type="message"],
-.form-wrapper select,
-.form-wrapper textarea {
-  width: 100%;
-  padding: 10px 12px;
-  margin-bottom: 15px;
-  font-size: 16px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  box-sizing: border-box;
-}
-
-
-/* Mobile-friendly */
-@media (max-width: 768px) {
-  .contact-page {
-    flex-direction: column; /* Stack on small screens */
-    align-items: center;
-  }
-
-  .form-wrapper,
-  .map-section {
-    max-width: 100%;
-  }
-}
-
-      </style>
-
-    <style>
-    .contact-page {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    
-    .map-section iframe {
-      width: 100%;
-      max-height: 900px; /* Adjust height here */
-      border: none;
-      border-radius: 10px;
-    }
-    
-    .form-wrapper form {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      max-height: 550px; /* Adjust height here */
-  
-    }
-
-    .form-wrapper form select {
-      height: 40px; /* Shrinks the Service dropdown */
-    }
-
-    .social-links-modern {
-  display: flex;
-  gap: 15px;
-  justify-content: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.social-icon {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  color: #333;
-  font-size: 18px;
-  transition: all 0.3s ease;
-  text-decoration: none;
-}
-
-.social-icon:hover {
-  background-color: #007bff;
-  color: #fff;
-}
-
-.social-icon.twitter:hover { background-color: #1DA1F2; }
-.social-icon.facebook:hover { background-color: #1877F2; }
-.social-icon.instagram:hover { background-color: #E4405F; }
-.social-icon.linkedin:hover { background-color: #0077B5; }
-.social-icon.whatsapp:hover { background-color: #25D366; }
-
-
-
-  </style>    
-      <section id="contact" class="section-bg" style="background-color: #cdfffc;">
-        <div class="container" data-aos="fade-up">
-          <div class="contact-title">
-            <h3 class="text-center mb-4"><strong>CONTACT US</strong> </h3>
-          </div>
-
-          <div class="contact-page">
-            <div class="map-section" style="max-height: 400px; overflow: hidden;">
-              <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.325434208527!2d80.20105907507718!3d13.014936187304464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671455555557%3A0xc132a69138b8fdf6!2sOlympia%20Technology%20Park!5e0!3m2!1sen!2sin!4v1746531228287!5m2!1sen!2sin" 
-                width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade">
-              </iframe>
-            </div>
-            <div class="form-wrapper" style="max-height: 400px; overflow: auto;" >
-              <form action="{% url 'submit' %}" method="post" style="display: flex; flex-direction: column; gap: 10px;">
-                {% csrf_token %}
+            </section><!-- End About Us Section -->
             
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" style="height: 40px;">
-            
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" style="height: 40px;">
-            
-                <label for="phone">Phone Number:</label>
-                <input type="tel" id="phone" name="phone" style="height: 40px;">
-            
-                <label for="services">Service:</label>
-                <select name="service" id="service" style="height: 40px;">
-                  <option value="">Select service</option>
-                  <option value="security service">Security Service</option>
-                  <option value="housekeeping">Housekeeping</option>
-                  <option value="bouncers">Bouncers</option>
-                </select>
-            
-                <label for="message">Message:</label>
-                <input type="message" id="message" name="message" style="height: 400px;">
-
-            
-                <input type="submit" value="Submit">
-              </form>
-            </div>
-            
-          </div>  
-          <div class="row contact-info">
-
-            <div class="col-md-4">
-              <div class="contact-address">
-                <i class="ion-ios-location-outline"></i>
-                <h3>Address</h3>
-                <address><strong>EVOLVE IT SOLUTION & EVOLVE SECURITY SERVICES OLYMPIA TECH PARK-CHENNAI </strong></address>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="contact-phone">
-                <i class="ion-ios-telephone-outline"></i>
-                <h3>Phone Number</h3>
-                <p><strong><a href="tel:+91 7897543432">+91 7897543432</a></strong></p>
-              </div>
-            </div>
-
-            <div class="col-md-4">
-              <div class="contact-email">
-                <i class="ion-ios-email-outline"></i>
-                <h3>Email</h3>
-                <strong></strong><a href="https://mail.google.com/mail/?view=cm&to=evolvesolutions@gmail.com" target="_blank">
-                  <!-- <span class="fas fa-envelope" style="margin-right: 5px;"></span> -->
-                 <b>Evolvesolutions@gmail.com</b> 
-              </a>
-              </div>
-            </div>
-          </div>
-         
-
-        </div>
-      </section><!-- End Contact Section -->
-    </main><!-- End #main -->
-
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-
-            <div class="col-lg-3 col-md-6 footer-info">
-              <h3>Evolve Security Services</h3>
-              <p>We are more than just a security company, We are your family.</p>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="#about">About us</a></li>
-                <li><i class="ion-ios-arrow-right"></i> <a href="#services">Services</a></li>
-              </ul>
-            </div>
-
-            <div class="col-lg-3 col-md-6 footer-contact">
-              <h4>Contact Us</h4>
-              <p>
-                Olympia Tech Park <br>
-                Guindy<br>
-                Chennai<br>
-                <strong>Phone:</strong> +91 7897543432<br>
-                <strong>Email:</strong> evolvesolutions@gmail.com<br>
-              </p>
-
-              <div class="social-links-modern">
-                <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://wa.me/919876543210" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-              </div>
+            <section id="services" style="background-color: #dbf6e9">
+              <div class="container my-5">
+                <h3 class="text-center mb-4"> <strong>OUR SERVICES</strong></h3>
+                <div class="row justify-content-center">
               
+                  <!-- Housekeeping Card -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="{% static 'images/Housekeeping.jpeg' %}" class="card-img-top" alt="Housekeeping">
+                      <div class="card-body">
+                        <h5 class="card-title">HOUSE KEEPING</h5>
+                        <p class="card-text">
+                          Professional cleaning, organizing, and maintenance services to ensure a spotless environment.
+                        </p>
+                        <ul>
+                          <li>✅ Daily or scheduled cleaning routines</li>
+                          <li>✅ Homes, offices, and commercial buildings</li>
+                          <li>✅ Dusting, mopping, vacuuming, and sanitizing</li>
+                          <li>✅ Trusted, trained, and verified cleaners</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
               
+                  <!-- Security Guard Card -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
+                      <div class="card-body">
+                        <h5 class="card-title">SECURITY GUARD SERVICES</h5>
+                        <p class="card-text">
+                          Trusted security personnel offering surveillance, access control, and emergency response services.
+                        </p>
+                        <ul>
+                          <li>✅ 24/7 on-site security</li>
+                          <li>✅ Residential, corporate & industrial coverage</li>
+                          <li>✅ Patrol, monitoring, and access control</li>
+                          <li>✅ Emergency-ready trained personnel</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+              
+                  <!-- Bouncer Services Card -->
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
+                      <div class="card-body">
+                        <h5 class="card-title">BOUNCER SERVICES</h5>
+                        <p class="card-text">
+                          Experienced bouncers ensuring crowd control, safety, and smooth event operations.
+                        </p>
+                          <li>✅ Physically fit and professionally trained</li>
+                          <li>✅ Party, club, and concert security services solutions</li>
+                          <li>✅ Crowd risk assessment, management & mitigation</li>
+                          <li>✅ Ensuring safety with professionalism</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>       
+                </div>
+              </div>        
+            </section>
+
+
+            <section id="contact" class="section-bg" style="background-color: #cdfffc;">
+              <div class="container" data-aos="fade-up">
+                <div class="contact-title">
+                  <h3 class="text-center mb-4"><strong>CONTACT US</strong> </h3>
+                </div>
+
+                <div class="contact-page">
+                  <div class="map-section" style="max-height: 400px; overflow: hidden;">
+                    <iframe 
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.325434208527!2d80.20105907507718!3d13.014936187304464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671455555557%3A0xc132a69138b8fdf6!2sOlympia%20Technology%20Park!5e0!3m2!1sen!2sin!4v1746531228287!5m2!1sen!2sin" 
+                      width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                      allowfullscreen=""
+                      loading="lazy"
+                      referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                  </div>
+                  <div class="form-wrapper" style="max-height: 400px; overflow: auto;" >
+                    <form action="{% url 'submit' %}" method="post" style="display: flex; flex-direction: column; gap: 10px;">
+                      {% csrf_token %}
+                  
+                      <label for="name">Name:</label>
+                      <input type="text" id="name" name="name" placeholder="Enter your name" style="height: 40px;">
+                  
+                      <label for="email">Email:</label>
+                      <input type="email" id="email" name="email" style="height: 40px;">
+                  
+                      <label for="phone">Phone Number:</label>
+                      <input type="tel" id="phone" name="phone" style="height: 40px;">
+                  
+                      <label for="services">Service:</label>
+                      <select name="service" id="service" style="height: 40px;">
+                        <option value="">Select service</option>
+                        <option value="security service">Security Service</option>
+                        <option value="housekeeping">Housekeeping</option>
+                        <option value="bouncers">Bouncers</option>
+                      </select>
+                  
+                      <label for="message">Message:</label>
+                      <input type="message" id="message" name="message" style="height: 400px;">
+
+                  
+                      <input type="submit" value="Submit">
+                    </form>
+                  </div>
+                  
+                </div>  
+                <div class="row contact-info">
+
+                  <div class="col-md-4">
+                    <div class="contact-address">
+                      <i class="ion-ios-location-outline"></i>
+                      <h3>Address</h3>
+                      <address>
+                        <strong>
+                          <a href="https://maps.app.goo.gl/YcFSzsSDMG6W7R9B8" rel="noopener noreferrer">
+                            EVOLVE IT SOLUTION & EVOLVE SECURITY SERVICES OLYMPIA TECH PARK - CHENNAI
+                          </a>
+                        </strong>
+                      </address>
+                      
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="contact-phone">
+                      <i class="ion-ios-telephone-outline"></i>
+                      <h3>Phone Number</h3>
+                      <p><strong><a href="tel:+91 7897543432">+91 7897543432</a></strong></p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="contact-email">
+                      <i class="ion-ios-email-outline"></i>
+                      <h3>Email</h3>
+                      <strong></strong><a href="https://mail.google.com/mail/?view=cm&to=evolvesolutions@gmail.com" target="_blank">
+                        <!-- <span class="fas fa-envelope" style="margin-right: 5px;"></span> -->
+                      <b>Evolvesolutions@gmail.com</b> 
+                    </a>
+                    </div>
+                  </div>
+                </div>
+              
+
+              </div>
+            </section><!-- End Contact Section -->
+          </main><!-- End #main -->
+
+          <!-- ======= Footer ======= -->
+          <footer id="footer">
+            <div class="footer-top">
+              <div class="container">
+                <div class="row">
+
+                  <div class="col-lg-3 col-md-6 footer-info">
+                    <h3>Evolve Security Services</h3>
+                    <p>We are more than just a security company, We are your family.</p>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 footer-links">
+                    <h4>Useful Links</h4>
+                    <ul>
+                      <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+                      <li><i class="ion-ios-arrow-right"></i> <a href="#about">About us</a></li>
+                      <li><i class="ion-ios-arrow-right"></i> <a href="#services">Services</a></li>
+                    </ul>
+                  </div>
+
+                  <div class="col-lg-3 col-md-6 footer-contact">
+                    <h4>Contact Us</h4>
+                    <p>
+                      Olympia Tech Park <br>
+                      Guindy<br>
+                      Chennai<br>
+                      <strong>Phone:</strong> +91 7897543432<br>
+                      <strong>Email:</strong> evolvesolutions@gmail.com<br>
+                    </p>
+
+                    <div class="social-links-modern">
+                      <a href="#" class="social-icon twitter" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                      <a href="#" class="social-icon facebook" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                      <a href="#" class="social-icon instagram" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                      <a href="#" class="social-icon linkedin" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                      <a href="https://wa.me/919876543210" class="social-icon whatsapp" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    
+                    
+                  </div>
+
+                </div>
+              </div>
             </div>
 
-          </div>
-        </div>
-      </div>
+            <div class="container">
+              <div class="copyright">
+                &copy; Copyright <strong>EVOLVE IT SOLUTIONS</strong>. All Rights Reserved
+              </div>
+              <div class="credits">
+                <a>Evolve solutions</a>
+              </div>
+            </div>
+          </footer><!-- End Footer -->
 
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong>EVOLVE IT SOLUTIONS</strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-           <a>Evolve solutions</a>
-        </div>
-      </div>
-    </footer><!-- End Footer -->
-
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-    <!-- Uncomment below i you want to use a preloader -->
-    <!-- <div id="preloader"></div> -->
+          <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+          <!-- Uncomment below i you want to use a preloader -->
+          <!-- <div id="preloader"></div> -->
 
 
-    <!-- Template Main JS File -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script>
-  $(document).ready(function () {
-    $(".mobile-nav-toggle").click(function () {
-      $(".nav-menu").toggleClass("mobile-nav");
-    });
-  });
-</script>
+          <!-- Template Main JS File -->
 
-    <script src="{% static 'myapp/main.js' %}"></script>
+          <a href="https://wa.me/919319552561?text=Hello" 
+        class="whatsapp-float" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        title="Chat with us on WhatsApp">
+        <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png" alt="WhatsApp Chat" />
+      </a>
 
-  </body>
+      <a href="https://www.facebook.com/YOUR_PAGE_USERNAME" 
+        class="facebook-float" 
+        target="_blank" 
+        rel="noopener noreferrer">
+        <img src="https://img.icons8.com/fluency/48/000000/facebook-new.png" alt="Facebook" />
+      </a>
 
-</html>
+          <script src="{% static 'myapp/main1.js' %}"></script>
+
+        </body>
+
+      </html>
