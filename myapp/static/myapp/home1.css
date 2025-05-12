@@ -478,7 +478,7 @@
   --------------------------------*/
   
   #contact {
-    padding: 60px 0;
+    padding: 50px 0;
   }
   
   #contact .contact-info {
@@ -514,68 +514,12 @@
     color: purple;
   }
   
-  #contact .contact-address, #contact .contact-phone, #contact .contact-email {
+  #contact .contact-address, #contact .contact-phone {
     margin-bottom: 20px;
-  }
+   }
   
 /* form ------------- */
 
-
-#about {
-  padding-top: 100px; /* increased from 60px to add space */
-}
-
-#contact {
-  padding-top: 100px; /* increased from 60px to add space */
-}
-
-.contact-title h2 {
-    text-align: center; /* Center the title */
-    margin-bottom: 30px; /* Add some space below the title */
-    font-family: Arial, sans-serif;
-    color: #333;
-    font-size: 2.5em; /* Make the title stand out */
-}
-
-.form-wrapper {
-    /* Your existing form wrapper styles can go here */
-    width: 400px; /* Example width */
-    margin: 0 auto; /* Center the form horizontally */
-    padding: 20px;
-    /* border: 1px solid #ccc; */
-    border-radius: 5px;
-}
-
-.form-wrapper label {
-    display: block; /* Make labels appear on their own line */
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.form-wrapper input[type="text"],
-.form-wrapper input[type="email"],
-.form-wrapper input[type="message"] {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    /* border: 1px solid #ddd; */
-    border-radius: 3px;
-    box-sizing: border-box; /* Ensure padding and border are within the element's width */
-}
-
-.form-wrapper input[type="submit"] {
-    background-color: #800080; /* Example button color */
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-}
-
-.form-wrapper input[type="submit"]:hover {
-    background-color: #0056b3;
-}
 
   /*--------------------------------------------------------------
   # Footer
@@ -768,7 +712,7 @@
   }
   
   .form-wrapper h2 {
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     color: #333;
   }
   
@@ -778,8 +722,10 @@
   }
   
   .form-wrapper label {
-    margin-bottom: 5px;
+    width: 120px;
     font-weight: bold;
+    margin: -5px;             
+    padding: 0; 
   }
   
   .form-wrapper input[type="text"],
@@ -797,6 +743,21 @@
     box-sizing: border-box;
   }
   
+
+.form-wrapper input[type="submit"] {
+    background-color: #800080; /* Example button color */
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.form-wrapper input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
   
   /* Mobile-friendly */
   @media (max-width: 768px) {
@@ -906,6 +867,5 @@
   
 
 
+ /* C:\Users\DELL\OneDrive\Desktop\security_service\myapp\static\myapp\home1.css */
 
-
-  

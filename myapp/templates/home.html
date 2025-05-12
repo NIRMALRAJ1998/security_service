@@ -35,7 +35,7 @@
       
 
           <!-- Template Main CSS File -->
-          <link rel="stylesheet" type="text/css" href="{% static 'myapp/security1.css' %}">
+          <link rel="stylesheet" type="text/css" href="{% static 'myapp/home1.css' %}">
           <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
 
         </head>
@@ -184,27 +184,66 @@
                       </div>
                     </div>
                   </div>
-              
-                  <!-- Bouncer Services Card -->
+
                   <div class="col-md-4 mb-4">
                     <div class="card h-100">
-                      <img src="{% static 'images/Bouncers.jpeg' %}" class="card-img-top" alt="Bouncer">
+                      <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
                       <div class="card-body">
-                        <h5 class="card-title">BOUNCER SERVICES</h5>
+                        <h5 class="card-title">SECURITY GUARD SERVICES</h5>
                         <p class="card-text">
-                          Experienced bouncers ensuring crowd control, safety, and smooth event operations.
+                          Trusted security personnel offering surveillance, access control, and emergency response services.
                         </p>
-                          <li>✅ Physically fit and professionally trained</li>
-                          <li>✅ Party, club, and concert security services solutions</li>
-                          <li>✅ Crowd risk assessment, management & mitigation</li>
-                          <li>✅ Ensuring safety with professionalism</li>
+                        <ul>
+                          <li>✅ 24/7 on-site security</li>
+                          <li>✅ Residential, corporate & industrial coverage</li>
+                          <li>✅ Patrol, monitoring, and access control</li>
+                          <li>✅ Emergency-ready trained personnel</li>
                         </ul>
                       </div>
                     </div>
-                  </div>       
-                </div>
-              </div>        
-            </section>
+                  </div>
+              
+                  
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
+                      <div class="card-body">
+                        <h5 class="card-title">SECURITY GUARD SERVICES</h5>
+                        <p class="card-text">
+                          Trusted security personnel offering surveillance, access control, and emergency response services.
+                        </p>
+                        <ul>
+                          <li>✅ 24/7 on-site security</li>
+                          <li>✅ Residential, corporate & industrial coverage</li>
+                          <li>✅ Patrol, monitoring, and access control</li>
+                          <li>✅ Emergency-ready trained personnel</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                    
+               
+
+                  
+                  <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                      <img src="{% static 'images/Security.jpeg' %}" class="card-img-top" alt="Security Guard">
+                      <div class="card-body">
+                        <h5 class="card-title">SECURITY GUARD SERVICES</h5>
+                        <p class="card-text">
+                          Trusted security personnel offering surveillance, access control, and emergency response services.
+                        </p>
+                        <ul>
+                          <li>✅ 24/7 on-site security</li>
+                          <li>✅ Residential, corporate & industrial coverage</li>
+                          <li>✅ Patrol, monitoring, and access control</li>
+                          <li>✅ Emergency-ready trained personnel</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+              
+                 </section>
 
 
             <section id="contact" class="section-bg" style="background-color: #cdfffc;">
@@ -214,21 +253,21 @@
                 </div>
 
                 <div class="contact-page">
-                  <div class="map-section" style="max-height: 400px; overflow: hidden;">
-                    <iframe 
+                  <div class="map-section" >
+                    <iframe
                       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.325434208527!2d80.20105907507718!3d13.014936187304464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a52671455555557%3A0xc132a69138b8fdf6!2sOlympia%20Technology%20Park!5e0!3m2!1sen!2sin!4v1746531228287!5m2!1sen!2sin" 
-                      width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
+                      width="800" height="545" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" 
                       allowfullscreen=""
                       loading="lazy"
                       referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                   </div>
-                  <div class="form-wrapper" style="max-height: 400px; overflow: auto;" >
+                  <div class="form-wrapper"> 
                     <form action="{% url 'submit' %}" method="post" style="display: flex; flex-direction: column; gap: 10px;">
                       {% csrf_token %}
                   
                       <label for="name">Name:</label>
-                      <input type="text" id="name" name="name" placeholder="Enter your name" style="height: 40px;">
+                      <input type="text" id="name" name="name" style="height: 40px;">
                   
                       <label for="email">Email:</label>
                       <input type="email" id="email" name="email" style="height: 40px;">
@@ -243,9 +282,10 @@
                         <option value="housekeeping">Housekeeping</option>
                         <option value="bouncers">Bouncers</option>
                       </select>
+      
                   
                       <label for="message">Message:</label>
-                      <input type="message" id="message" name="message" style="height: 400px;">
+                      <input type="message" id="message" name="message" style="height: 5pyt0px;">
 
                   
                       <input type="submit" value="Submit">
@@ -258,7 +298,7 @@
                   <div class="col-md-4">
                     <div class="contact-address">
                       <i class="ion-ios-location-outline"></i>
-                      <h3>Address</h3>
+                      <h3><i class="fa fa-map-marker-alt"style="font-size: 2em;"></i> Address</h3>
                       <address>
                         <strong>
                           <a href="https://maps.app.goo.gl/YcFSzsSDMG6W7R9B8" rel="noopener noreferrer">
@@ -273,7 +313,7 @@
                   <div class="col-md-4">
                     <div class="contact-phone">
                       <i class="ion-ios-telephone-outline"></i>
-                      <h3>Phone Number</h3>
+                      <h3><i class="fas fa-phone" style="font-size: 2em;" ></i>  Phone Number</h3>
                       <p><strong><a href="tel:+91 7897543432">+91 7897543432</a></strong></p>
                     </div>
                   </div>
@@ -281,7 +321,7 @@
                   <div class="col-md-4">
                     <div class="contact-email">
                       <i class="ion-ios-email-outline"></i>
-                      <h3>Email</h3>
+                      <h3><i class="fas fa-envelope fa-sm" style="font-size: 2rem;" ></i> Mail ID</h3>
                       <strong></strong><a href="https://mail.google.com/mail/?view=cm&to=evolvesolutions@gmail.com" target="_blank">
                         <!-- <span class="fas fa-envelope" style="margin-right: 5px;"></span> -->
                       <b>Evolvesolutions@gmail.com</b> 
@@ -377,3 +417,5 @@
         </body>
 
       </html>
+
+      C:\Users\DELL\OneDrive\Desktop\security_service\myapp\templates\home.html
